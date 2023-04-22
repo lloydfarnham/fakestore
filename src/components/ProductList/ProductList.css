@@ -1,0 +1,22 @@
+.ProductList {
+    margin: 0 7%;
+}
+
+.productlist-categories {
+    display: flex;
+    gap: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #5264C4;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.productlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+}

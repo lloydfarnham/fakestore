@@ -1,0 +1,13 @@
+.footer-container {
+    margin-top: 70px;
+    background-color: #3A4895;
+    min-height: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--white);
+    padding: 0px 35px;
+}

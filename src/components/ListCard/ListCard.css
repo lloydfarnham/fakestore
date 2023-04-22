@@ -1,0 +1,53 @@
+.ListCard {
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 32px;
+    background-color: var(--white);
+}
+
+.listcard-image-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--greyoutline);
+    border-radius: 8px;
+}
+
+.listcard-image {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.listcard-title {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listcard-category {
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--darkgrey);
+    margin-top: 6px;
+}
+
+.listcard-price {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 16px;
+}

@@ -1,0 +1,44 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0px 35px;
+    margin-bottom: 50px;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main);
+}
+
+.nav-cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;    
+    padding-top: 5px;
+}
+
+.nav-cart-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--main);
+}
+
+.nav-cart-count {
+    text-align: center;
+    background-color: var(--red);
+    color: var(--white);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    z-index: 1;
+    position: absolute;
+    bottom: 22px;
+    left: 14px;
+}
