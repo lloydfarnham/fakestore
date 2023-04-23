@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 import './ProductDetail.css';
 
 function ProductDetail () {
     const [productDetail, setProductDetail] = useState([]);
     const { id } = useParams();
+    const { cart, setCart } = useContext(CartContext);
 
     useEffect(() => {
         let url = `https://fakestoreapi.com/products/${id}`;
@@ -18,6 +20,11 @@ function ProductDetail () {
           .catch((error) => console.log(error));
       }, []);
 
+    const addToCart = () => {
+        const updatedCart = [...cart, id];
+        setCart(updatedCart);
+    }
+
     return (    
         <div className="ProductDetail">
             <div className="productdetail-container">
@@ -27,7 +34,7 @@ function ProductDetail () {
                     <h1 className="productdetail-price">€{productDetail.price}</h1>
                     <h2 className="productdetail-description-title">Description</h2>
                     <p className="productdetail-description">{productDetail.description}</p>
-                    <button className="productdetail-button">Add to cart</button>
+                    <button className="productdetail-button" onClick={addToCart}>Add to cart</button>
                 </div>
             </div>
         </div>
