@@ -34,7 +34,7 @@ function ProductDetail () {
                     <h1 className="productdetail-price">€{productDetail.price}</h1>
                     <h2 className="productdetail-description-title">Description</h2>
                     <p className="productdetail-description">{productDetail.description}</p>
-                    <button className="productdetail-button" onClick={addToCart}>Add to cart</button>
+                    <button className="button" onClick={addToCart}>Add to cart</button>
                 </div>
             </div>
         </div>

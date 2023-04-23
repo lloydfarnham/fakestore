@@ -19,6 +19,7 @@
     justify-content: center;
     position: relative;    
     padding-top: 5px;
+    cursor: pointer;
 }
 
 .nav-cart-icon {

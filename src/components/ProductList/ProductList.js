@@ -17,7 +17,6 @@ function ProductList () {
           .get(categoryApi)
           .then((response) => {
             setCategoryList(response.data);
-            // console.log(response.data);
           })
           .catch((error) => console.log(error));
     }, []);
@@ -33,7 +32,6 @@ function ProductList () {
           .get(url)
           .then((response) => {
             setProductList(response.data);
-            // console.log(response.data);
           })
           .catch((error) => console.log(error));
       }, [location.search]);

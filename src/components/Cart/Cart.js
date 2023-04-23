@@ -35,7 +35,7 @@ function Cart() {
             const quantity = itemCounts[product.id];
             total += price * quantity;
           });
-          setCartTotal(total.toLocaleString());
+          setCartTotal(total.toFixed(2).toLocaleString());
         })
       )
       .catch(error => console.error(error));
@@ -50,11 +50,14 @@ function Cart() {
           <h1 className="tc">Quantity</h1>
           <h1 className="tc">Remove</h1>
         </div>
+        <div className="cart-border"></div>
         {Object.entries(itemCounts).map(([id, quantity]) => (
           <CartCard key={id} id={id} quantity={quantity} />
         ))}
-        <h1>Total €{cartTotal}</h1>
-        <button className="cart-button">Checkout</button>
+        <div className="cart-total-checkout">
+        <h1>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€{cartTotal}</h1>
+          <button className="button">Checkout</button>
+        </div>
       </div>
     </div>
   );

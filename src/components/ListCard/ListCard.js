@@ -12,7 +12,7 @@ function ListCard (props) {
                 </div>
                 <h1 className="listcard-title">{props.title}</h1>
                 <h2 className="listcard-category">{capitalize(props.category)}</h2>
-                <h1 className="listcard-price">€{props.price}</h1>
+                <h1 className="listcard-price">€{props.price.toFixed(2)}</h1>
             </div>
         </Link>
     );

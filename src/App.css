@@ -3,7 +3,8 @@
     --white: #ffffff;
 	--background: #FAFAFA;
 	--greyoutline: #EFEFEF;
-	--darkgrey: #949494;
+	--grey: #949494;
+	--darkgrey: #979797;
 	--offblack: #282828;
     --red: #F90505;
 	--yellow: #FFD814;
@@ -95,4 +96,14 @@ a:visited {
 
 .tc {
 	text-align: center;
+}
+
+.button {
+    background-color: var(--yellow);
+    width: 156px;
+    height: 41px;
+    font-weight: 700;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
 }

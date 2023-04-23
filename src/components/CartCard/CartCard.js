@@ -28,7 +28,7 @@ function CartCard(props) {
       <div className="cartcard-container">
         <img className="cartcard-image" src={itemDetail?.image} />
         <p className="cartcard-title">{itemDetail?.title}</p>
-        <p className="tc">€{itemDetail?.price}</p>
+        <p className="tc">€{itemDetail?.price.toFixed(2)}</p>
         <p className="tc">{props.quantity}</p>
         <div className="h-align">
             <GoTrashcan className="cartcard-remove" onClick={removeItem} />
