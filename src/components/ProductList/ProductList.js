@@ -48,11 +48,11 @@ function ProductList () {
         <div className="ProductList">
             <ul className="productlist-categories">
                 <li>
-                    <Link to="/" className={`nolink shrink ${isActive("all") ? "bold" : ""}`}>All</Link>
+                    <Link to="/" className={`hover-underline-animation nolink shrink ${isActive("all") ? "bold" : ""}`}>All</Link>
                 </li>
                 {categoryList.map((category) => (
                     <li key={category}>
-                        <Link to={`${location.pathname}?category=${category}`} className={`nolink shrink ${isActive(category) ? "bold" : ""}`}>
+                        <Link to={`${location.pathname}?category=${category}`} className={`hover-underline-animation nolink shrink ${isActive(category) ? "bold" : ""}`}>
                             {capitalize(category)}
                         </Link>
                     </li>

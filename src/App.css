@@ -4,7 +4,9 @@
 	--background: #FAFAFA;
 	--greyoutline: #EFEFEF;
 	--darkgrey: #949494;
+	--offblack: #282828;
     --red: #F90505;
+	--yellow: #FFD814;
   }
 
 html, body, div, span, applet, object, iframe,
@@ -52,6 +54,12 @@ table {
 	border-spacing: 0;
 }
 
+button {
+	padding: 0;
+	border: none;
+	background: none;
+}
+
 .noselect {
     -webkit-touch-callout: none; 
       -webkit-user-select: none; 
@@ -65,6 +73,7 @@ table {
 	text-decoration: none;
 	-webkit-user-drag: none;
 	user-drag: none;
+	color: inherit;
 }
 
 a:visited {
