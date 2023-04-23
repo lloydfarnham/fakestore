@@ -86,3 +86,13 @@ a:visited {
 	justify-content: space-between;
 	min-height: 51vw;
 }
+
+.h-align {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.tc {
+	text-align: center;
+}

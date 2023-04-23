@@ -27,3 +27,17 @@
 .cart-key-title {
     grid-column: span 3;
 }
+
+.cart-border {
+    width: 100%;
+    border-bottom: 2px solid var(--greyoutline);    
+}
+
+.cart-button {
+    background-color: var(--yellow);
+    width: 156px;
+    height: 41px;
+    font-weight: 700;
+    font-size: 14px;
+    outline: none;
+}

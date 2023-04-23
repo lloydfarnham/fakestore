@@ -14,13 +14,12 @@ function CartCard(props) {
       .get(url)
       .then((response) => {
         setItemDetail(response.data);
-        console.log(response.data);
       })
       .catch((error) => console.log(error));
   }, []);
 
   function removeItem() {
-    const newCart = cart.filter((item) => item.id !== props.id);
+    const newCart = cart.filter((item) => item !== props.id);
     setCart(newCart);
   }
 
@@ -29,9 +28,11 @@ function CartCard(props) {
       <div className="cartcard-container">
         <img className="cartcard-image" src={itemDetail?.image} />
         <p className="cartcard-title">{itemDetail?.title}</p>
-        <p>{itemDetail?.price}</p>
-        <p>{props.quantity}</p>
-        <GoTrashcan className="cartcard-remove" onClick={removeItem} />
+        <p className="tc">€{itemDetail?.price}</p>
+        <p className="tc">{props.quantity}</p>
+        <div className="h-align">
+            <GoTrashcan className="cartcard-remove" onClick={removeItem} />
+        </div>
       </div>
     </div>
   );

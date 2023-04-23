@@ -28,4 +28,6 @@
 .cartcard-remove {
     width: 30px;
     height: auto;
+    position: relative;
+    bottom: 6.5px;
 }
