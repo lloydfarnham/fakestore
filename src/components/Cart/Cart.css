@@ -1,0 +1,29 @@
+.Cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-items-container {
+    width: 70%;
+    max-width: 800px;
+    padding: 5vh 0;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vw;
+    align-items: center;
+}
+
+.cart-key-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-gap: 30px;
+    width: 90%;
+    margin-bottom: 2vw;
+}
+
+.cart-key-title {
+    grid-column: span 3;
+}

@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import ProductList from './components/ProductList/ProductList';
 import ProductDetail from './components/ProductDetail/ProductDetail';
-import Checkout from './components/Checkout/Checkout';
+import Cart from './components/Cart/Cart';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import OrderSuccess from './components/OrderSuccess/OrderSuccess';
@@ -19,7 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<ProductList/>} />
               <Route path="/:id" element={<ProductDetail/>} />
-              <Route path="/checkout" element={<Checkout/>} />
+              <Route path="/cart" element={<Cart/>} />
               <Route path="/contact" element={<Contact/>} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
