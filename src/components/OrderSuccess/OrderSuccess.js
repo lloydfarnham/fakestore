@@ -16,8 +16,8 @@ function OrderSuccess () {
     return (
         <div className="ordersuccess-overlay">
         <div className="ordersuccess-container">
-            <h1 className="ordersuccess-copy">Your Order was successful!<br /><br /><br /><br /><br />
-                                            Check your email for the order confirmation. Thank you for shopping with Fake Store!<br /><br /><br /><br /><br /></h1>
+            <h1 className="ordersuccess-copy">Your Order was successful!</h1>
+            <h1 className="ordersuccess-copy">Check your email for the order confirmation. Thank you for shopping with Fake Store!</h1>
             <button className="ordersuccess-button button" onClick={handleReturnToMainPage}>Return to Main Page</button>
         </div>
       </div>

@@ -15,9 +15,7 @@ function Nav () {
                     <AiOutlineShoppingCart className="nav-cart-icon"/>
                     {cart.length > 0 ? (
                     <div className="nav-cart-count noselect">{cart.length}</div>
-                    ) : (
-                    <span></span>
-                    )}
+                    ) : null }
                 </div>
             </Link>
         </div>

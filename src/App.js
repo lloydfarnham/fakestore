@@ -29,7 +29,7 @@ function App() {
             </div>
             <Footer/>
           </div>
-          { order ? ( <OrderSuccess /> ) : (<span></span>)}
+          { order ? ( <OrderSuccess /> ) : null}
     </div>
   );
 }
