@@ -1,12 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import { OrderSuccessContext } from "../../contexts/OrderSuccessContext";
 import './Cart.css';
 import CartCard from '../CartCard/CartCard';
-import { CartTotalContext } from "../../contexts/CartTotalContext";
 import axios from "axios";
+import { GoCheck } from "react-icons/go";
 
 function Cart() {
   const { cart, setCart } = useContext(CartContext);
+  const { order, setOrder } = useContext(OrderSuccessContext);
 
   const [cartTotal, setCartTotal] = useState(0);
 
@@ -41,6 +43,10 @@ function Cart() {
       .catch(error => console.error(error));
   }, [itemCounts]);
 
+  function handleCheckout() {
+    setOrder(true);
+  }
+
   return (
     <div className="Cart">
       <div className="cart-items-container">
@@ -56,7 +62,7 @@ function Cart() {
         ))}
         <div className="cart-total-checkout">
         <h1>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€{cartTotal}</h1>
-          <button className="button">Checkout</button>
+          <button className="button" onClick={handleCheckout}>Checkout</button>
         </div>
       </div>
     </div>

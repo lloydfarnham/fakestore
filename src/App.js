@@ -1,4 +1,6 @@
+import React, { useContext } from "react";
 import { Route, Routes, Navigate } from 'react-router-dom';
+import { OrderSuccessContext } from './contexts/OrderSuccessContext';
 import Nav from './components/Nav/Nav';
 import ProductList from './components/ProductList/ProductList';
 import ProductDetail from './components/ProductDetail/ProductDetail';
@@ -7,14 +9,13 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import OrderSuccess from './components/OrderSuccess/OrderSuccess';
 import './App.css';
-import CartProvider from './contexts/CartContext';
-import CartTotalProvider from './contexts/CartTotalContext';
 
 function App() {
+
+  const { order } = useContext(OrderSuccessContext);
+
   return (
     <div className="App">
-      <CartProvider>
-        <CartTotalProvider>
           <div className="app-container">
             <div>
               <Nav />
@@ -28,9 +29,7 @@ function App() {
             </div>
             <Footer/>
           </div>
-          <OrderSuccess />
-        </CartTotalProvider>
-      </CartProvider>
+          { order ? ( <OrderSuccess /> ) : (<span></span>)}
     </div>
   );
 }
