@@ -48,11 +48,25 @@
     margin-bottom: 20px;
 }
 
-.productdetail-button {
-    background-color: var(--yellow);
-    width: 156px;
-    height: 41px;
-    font-weight: 700;
-    font-size: 14px;
-    outline: none;
+.productdetail-button-container {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .productdetail-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .productdetail-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .productdetail-button-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
 }

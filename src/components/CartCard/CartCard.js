@@ -29,9 +29,9 @@ function CartCard(props) {
         <img className="cartcard-image" src={itemDetail?.image} />
         <p className="cartcard-title">{itemDetail?.title}</p>
         <p className="tc">€{itemDetail?.price.toFixed(2)}</p>
-        <p className="tc">{props.quantity}</p>
-        <div className="h-align">
-            <GoTrashcan className="cartcard-remove" onClick={removeItem} />
+          <p className="tc">{props.quantity}</p>
+          <div className="h-align">
+              <GoTrashcan className="cartcard-remove" onClick={removeItem} />
         </div>
       </div>
     </div>
