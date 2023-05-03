@@ -25,6 +25,12 @@
     margin-bottom: 10px;
 }
 
+.cart-items-empty {
+    margin: 100px;
+    font-weight: 600;
+    font-size: 24px;    
+}
+
 .cart-key-title {
     grid-column: span 3;
 }
@@ -32,12 +38,6 @@
 .cart-border {
     width: 100%;
     border-bottom: 2px solid var(--greyoutline);    
-}
-
-.cartcard-quantity-remove-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 .cart-total-checkout {

@@ -57,6 +57,7 @@ function Cart() {
           <h1 className="tc">Remove</h1>
         </div>
         <div className="cart-border"></div>
+        { cart.length == 0 ? ( <h1 className="cart-items-empty">No items in cart</h1> ) : null }
         {Object.entries(itemCounts).map(([id, quantity]) => (
           <CartCard key={id} id={id} quantity={quantity} />
         ))}
