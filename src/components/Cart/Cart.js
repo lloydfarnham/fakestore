@@ -37,7 +37,7 @@ function Cart() {
             const quantity = itemCounts[product.id];
             total += price * quantity;
           });
-          setCartTotal(total.toFixed(2).toLocaleString());
+          setCartTotal(total.toFixed(2).toLocaleString().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         })
       )
       .catch(error => console.error(error));

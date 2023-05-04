@@ -27,6 +27,37 @@
     grid-column: span 2;
 }
 
+.cartcard-quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartcard-quantity {
+    position: relative;
+    bottom: 3px;
+    max-height: 20px;
+    max-width: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid var(--darkgrey);
+    border-radius: 2px;
+}
+
+.cartcard-quantity-button-container {
+    display: flex;
+    gap: 4px;
+}
+
+.cartcard-quantity-button {
+    min-width: 24px;
+    border: 1px solid var(--darkgrey);
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .cartcard-remove {
     width: 30px;
     height: auto;
