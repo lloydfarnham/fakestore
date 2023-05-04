@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import axios from "axios";
 import "./CartCard.css";
@@ -46,7 +47,9 @@ function CartCard(props) {
   return (
     <div className="CartCard">
       <div className="cartcard-container">
-        <img className="cartcard-image" src={itemDetail?.image} />
+        <Link to={`/${props.id}`} className="nolink">
+          <img className="cartcard-image" src={itemDetail?.image} />
+        </Link>
         <p className="cartcard-title">{itemDetail?.title}</p>
         <p className="tc">€{itemDetail?.price.toFixed(2)}</p>
           <div className="h-align">

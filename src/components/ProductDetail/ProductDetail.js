@@ -15,7 +15,6 @@ function ProductDetail () {
           .get(url)
           .then((response) => {
             setProductDetail(response.data);
-            // console.log(response.data);
           })
           .catch((error) => console.log(error));
       }, []);
@@ -31,7 +30,7 @@ function ProductDetail () {
                 <img className="productdetail-image" src={productDetail.image}></img>
                 <div className="productdetail-details">
                     <h1 className="productdetail-title">{productDetail.title}</h1>
-                    <h1 className="productdetail-price">€{productDetail.price}</h1>
+                    <h1 className="productdetail-price">€{productDetail.price ? productDetail.price.toFixed(2) : ''}</h1>
                     <h2 className="productdetail-description-title">Description</h2>
                     <p className="productdetail-description">{productDetail.description}</p>
                     <div className="productdetail-button-container">

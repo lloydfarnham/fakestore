@@ -37,7 +37,7 @@ function Cart() {
             const quantity = itemCounts[product.id];
             total += price * quantity;
           });
-          setCartTotal(total.toFixed(2).toLocaleString().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+          setCartTotal(total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         })
       )
       .catch(error => console.error(error));
@@ -50,13 +50,17 @@ function Cart() {
   return (
     <div className="Cart">
       <div className="cart-items-container">
+      { cart.length > 0 ? ( 
         <div className="cart-key-container">
           <h1 className="cart-key-title">Item</h1>
           <h1 className="tc">Price</h1>
           <h1 className="tc">Quantity</h1>
           <h1 className="tc">Remove</h1>
         </div>
+       ) : null }
+      { cart.length > 0 ? ( 
         <div className="cart-border"></div>
+       ) : null }
         { cart.length == 0 ? ( 
           <div className="cart-empty-container">
             <h1 className="cart-items-empty">No items in cart</h1> 
