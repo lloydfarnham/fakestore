@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import { OrderSuccessContext } from "../../contexts/OrderSuccessContext";
 import './Cart.css';
 import CartCard from '../CartCard/CartCard';
 import axios from "axios";
-import { GoCheck } from "react-icons/go";
 
 function Cart() {
   const { cart, setCart } = useContext(CartContext);
@@ -57,14 +57,21 @@ function Cart() {
           <h1 className="tc">Remove</h1>
         </div>
         <div className="cart-border"></div>
-        { cart.length == 0 ? ( <h1 className="cart-items-empty">No items in cart</h1> ) : null }
+        { cart.length == 0 ? ( 
+          <div className="cart-empty-container">
+            <h1 className="cart-items-empty">No items in cart</h1> 
+            <Link to="/"><button className="button contact-submit">Return to home</button></Link>
+          </div>
+        ) : null }
         {Object.entries(itemCounts).map(([id, quantity]) => (
           <CartCard key={id} id={id} quantity={quantity} />
         ))}
-        <div className="cart-total-checkout">
-        <h1>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€{cartTotal}</h1>
-          <button className="button" onClick={handleCheckout}>Checkout</button>
-        </div>
+        { cart.length > 0 ? ( 
+          <div className="cart-total-checkout">
+          <h1>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€{cartTotal}</h1>
+            <button className="button" onClick={handleCheckout}>Checkout</button>
+          </div>
+        ) : null }
       </div>
     </div>
   );

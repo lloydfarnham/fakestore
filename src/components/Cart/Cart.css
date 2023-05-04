@@ -25,8 +25,15 @@
     margin-bottom: 10px;
 }
 
-.cart-items-empty {
+.cart-empty-container {
     margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.cart-items-empty {
     font-weight: 600;
     font-size: 24px;    
 }
@@ -63,6 +70,9 @@
         padding: 0 0 5vw 0;
     }
     .cart-key-container {
+        display: none;
+    }
+    .cart-border {
         display: none;
     }
 }

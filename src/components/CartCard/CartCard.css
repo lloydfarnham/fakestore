@@ -37,6 +37,9 @@
 }
 
 @media screen and (max-width: 680px) {
+    .CartCard {
+        border-top: 2px solid var(--greyoutline);  
+    }
     .cartcard-container {
         display: flex;
         flex-direction: column;
